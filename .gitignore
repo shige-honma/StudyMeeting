@@ -27,3 +27,14 @@
 *.exe
 *.out
 *.app
+
+# Project files
+*.sdf
+*.suo
+*.user
+*.BAK
+
+# Folders
+x64/
+bin/
+ipch/
