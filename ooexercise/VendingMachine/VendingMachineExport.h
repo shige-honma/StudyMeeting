@@ -1,0 +1,33 @@
+// -*- C++ -*-
+// $Id: TemplateExport.h 213 2014-06-18 11:57:01Z 002007 $
+// Definition for Win32 Export directives.
+// This file is generated automatically by TINA_Custom_Project
+// ------------------------------
+#ifndef VENDINGMACHINE_EXPORT_H
+#define VENDINGMACHINE_EXPORT_H
+
+#include "ace/config-all.h"
+
+#if !defined (VENDINGMACHINE_HAS_DLL)
+#  define VENDINGMACHINE_HAS_DLL 1
+#endif /* ! VENDINGMACHINE_HAS_DLL */
+
+#if defined (VENDINGMACHINE_HAS_DLL) && (VENDINGMACHINE_HAS_DLL == 1)
+#  if defined (VENDINGMACHINE_BUILD_DLL)
+#    define VendingMachine_Export ACE_Proper_Export_Flag
+#    define VENDINGMACHINE_SINGLETON_DECLARATION(T) ACE_EXPORT_SINGLETON_DECLARATION (T)
+#    define VENDINGMACHINE_SINGLETON_DECLARE(SINGLETON_TYPE, CLASS, LOCK) ACE_EXPORT_SINGLETON_DECLARE(SINGLETON_TYPE, CLASS, LOCK)
+#  else /* ! VENDINGMACHINE_BUILD_DLL */
+#    define VendingMachine_Export ACE_Proper_Import_Flag
+#    define VENDINGMACHINE_SINGLETON_DECLARATION(T) ACE_IMPORT_SINGLETON_DECLARATION (T)
+#    define VENDINGMACHINE_SINGLETON_DECLARE(SINGLETON_TYPE, CLASS, LOCK) ACE_IMPORT_SINGLETON_DECLARE(SINGLETON_TYPE, CLASS, LOCK)
+#  endif /* VENDINGMACHINE_BUILD_DLL */
+#else /* VENDINGMACHINE_HAS_DLL == 1 */
+#  define VendingMachine_Export
+#  define VENDINGMACHINE_SINGLETON_DECLARATION(T)
+#  define VENDINGMACHINE_SINGLETON_DECLARE(SINGLETON_TYPE, CLASS, LOCK)
+#endif /* VENDINGMACHINE_HAS_DLL == 1 */
+
+#endif /* VENDINGMACHINE_EXPORT_H */
+
+// End of auto generated file.
